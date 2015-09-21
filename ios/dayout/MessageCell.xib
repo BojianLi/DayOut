@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="182" id="KGk-i7-Jjw" customClass="MessageCell">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="182"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="420" height="182"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" canCancelContentTouches="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gat-f6-f5n">
+                        <rect key="frame" x="0.0" y="31" width="420" height="135"/>
+                        <color key="backgroundColor" red="0.88634126199999996" green="1" blue="0.78195445180000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Mike:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVf-Xp-LIs">
+                        <rect key="frame" x="9" y="8" width="41" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="19:32:43" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBT-Kg-dOu">
+                        <rect key="frame" x="344" y="8" width="69" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="vBT-Kg-dOu" secondAttribute="trailing" id="7uA-je-hcR"/>
+                    <constraint firstAttribute="topMargin" secondItem="vBT-Kg-dOu" secondAttribute="top" id="87T-hh-i2u"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="gat-f6-f5n" secondAttribute="trailing" id="8bE-uM-B1A"/>
+                    <constraint firstItem="gat-f6-f5n" firstAttribute="top" secondItem="SVf-Xp-LIs" secondAttribute="bottom" constant="2" id="In6-vY-79v"/>
+                    <constraint firstAttribute="topMargin" secondItem="SVf-Xp-LIs" secondAttribute="top" id="MHB-Cy-ybG"/>
+                    <constraint firstItem="gat-f6-f5n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="fYF-IE-EeB"/>
+                    <constraint firstItem="SVf-Xp-LIs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="1" id="m8F-nu-NhF"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="gat-f6-f5n" secondAttribute="bottom" constant="8" id="yLP-DK-QdA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="messageContentTextView" destination="gat-f6-f5n" id="krj-5t-opQ"/>
+                <outlet property="messageNameLabel" destination="SVf-Xp-LIs" id="VRy-rM-nNC"/>
+                <outlet property="messageTimeLabel" destination="vBT-Kg-dOu" id="XOo-jR-7Kk"/>
+            </connections>
+            <point key="canvasLocation" x="641" y="494"/>
+        </tableViewCell>
+    </objects>
+</document>
